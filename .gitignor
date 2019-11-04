@@ -1,9 +1,9 @@
 # ukubuka projects
 
-/acp
-/back
-/db
-/front
-/mysql
-/nginx
-/old
+/acp/
+/back/
+/db/
+/front/
+/mysql/
+/nginx/
+/old/
