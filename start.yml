@@ -1,0 +1,53 @@
+version: "3"
+services:
+  nginx:
+    container_name: nginx
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - C:\Users\hutei\dev\ukubuka\nginx\nginx.conf:/etc/nginx/conf.d/nginx.conf
+    networks:
+      - u_net
+    restart: unless-stopped
+    links:
+        - front
+        - acp
+        - back
+  mysql:
+    container_name: mysql
+    image: mysql:5
+    ports:
+      - "3306:3306"
+    volumes:
+      - C:\Users\hutei\dev\ukubuka\mysql\data:/var/lib/mysql
+    environment:
+      - "MYSQL_ROOT_PASSWORD=root"
+    networks:
+      - u_net
+    restart: unless-stopped
+  back:
+    container_name: back
+    build: back/
+    networks:
+      - u_net
+    restart: unless-stopped
+  front:
+    container_name: front
+    build: front/
+    depends_on:
+      - back
+    networks:
+      - u_net
+    restart: unless-stopped
+  acp:
+    container_name: acp
+    build: acp/
+    depends_on:
+      - back
+    networks:
+      - u_net
+    restart: unless-stopped
+networks:
+  u_net:
+    driver: bridge
