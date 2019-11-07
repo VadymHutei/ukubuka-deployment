@@ -1,0 +1,23 @@
+https:// ukubuka.net /                                               Home page
+
+https:// ukubuka.net / shop                                          Shop module
+https:// ukubuka.net / shop / <category> /                           Category's products list
+https:// ukubuka.net / shop / <category> / <subcategory> /           Subcategory' products list
+https:// ukubuka.net / shop / <category> / <subcategory> / ... /     ...
+
+https:// ukubuka.net / shop / <product_name>                         Product cart
+https:// ukubuka.net / shop / <product_id>   =>  <product_name>      Redirect to "/ shop / <product_name>"
+
+https:// ukubuka.net / cart                                          Customer's cart
+
+https:// ukubuka.net / order                                         Order confirmation
+
+https:// ukubuka.net / account                                       User account page
+https:// ukubuka.net / account / edit                                Edit account page
+https:// ukubuka.net / account / orders /                            Orders history
+https:// ukubuka.net / account / subscription                        Mailing management
+
+https:// ukubuka.net / about /                                       Info pages
+                     / contacts /
+                     / delivery /
+                         ...
